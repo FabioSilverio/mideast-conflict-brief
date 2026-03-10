@@ -48,7 +48,7 @@ const C = {
 /* ── Map Data ── */
 const incidents = [
   // Iran - Airstrikes
-  { lat: 35.70, lng: 51.42, label: "Tehran — 5,000+ Targets Hit", desc: "UPDATED: Joint Chiefs confirms 5,000+ targets struck. 'Most intense day' underway. 1,270+ killed. Toxic smoke from oil strikes over city.", color: C.airstrike, size: 16, tag: "airstrike", severity: "high" },
+  { lat: 35.70, lng: 51.42, label: "Tehran — 5,000+ Targets Hit", desc: "UPDATED: 5,000+ targets struck. 1,332+ killed (per Iran UN envoy), ~1,900 regime fighters killed (IDF est). Intense bombardment near Risalat Square killed 40.", color: C.airstrike, size: 16, tag: "airstrike", severity: "high" },
   { lat: 32.65, lng: 51.68, label: "Isfahan — Natanz Nuclear", desc: "Natanz enrichment facility severely damaged. F-14s destroyed at 8th Tactical Airbase.", color: C.airstrike, size: 14, tag: "airstrike", severity: "high" },
   { lat: 34.90, lng: 50.60, label: "Fordow Nuclear Facility", desc: "Underground enrichment facility struck. 440kg of 60%-enriched uranium unaccounted for.", color: C.airstrike, size: 14, tag: "airstrike", severity: "high" },
   { lat: 28.95, lng: 50.83, label: "Bushehr Airport", desc: "Airport destroyed in IDF strikes Mar 3.", color: C.airstrike, size: 10, tag: "airstrike", severity: "medium" },
@@ -103,14 +103,20 @@ const incidents = [
   // Mar 10 15:40 BRT updates
   { lat: 26.22, lng: 50.58, label: "Manama — Residential Building Hit", desc: "Iranian strike on residential building in Bahrain capital. 29-year-old woman killed, 8 injured. First confirmed civilian fatality.", color: C.missile, size: 12, tag: "missile", severity: "high" },
   { lat: 31.77, lng: 35.23, label: "Jerusalem — Sirens Activated", desc: "Fresh Iranian missile salvo toward Israel. Sirens in Jerusalem. Air defenses engaging incoming threats.", color: C.missile, size: 12, tag: "missile", severity: "high" },
-  { lat: 32.08, lng: 34.78, label: "Tel Aviv — Explosions Reported", desc: "Explosions heard as Iron Dome intercepts Iranian missiles. 14 killed in Israel since war began.", color: C.missile, size: 12, tag: "missile", severity: "high" },
+  { lat: 32.08, lng: 34.78, label: "Tel Aviv — Explosions Reported", desc: "UPDATED: 16 killed in Israel since war began (2 construction workers by cluster bombs). 1,929 injured since Feb 28. Wartime emergency extended through Saturday.", color: C.missile, size: 12, tag: "missile", severity: "high" },
 
-  // NEW — Mar 10 16:43 BRT updates
-  { lat: 24.11, lng: 52.73, label: "Ruwais — ADNOC Refinery Shut Down", desc: "NEW: Iranian drone strike caused fire at Ruwais Industrial Complex. ADNOC shut world's largest refinery as precaution. No injuries.", color: C.energy, size: 14, tag: "energy", severity: "high" },
-  { lat: 26.30, lng: 50.00, label: "Saudi Eastern Province — Drones Intercepted", desc: "NEW: Saudi defense ministry intercepted and destroyed 2 Iranian drones over oil-rich eastern territory.", color: C.missile, size: 10, tag: "missile", severity: "medium" },
-  { lat: 29.50, lng: 47.75, label: "Kuwait — 6 Drones Downed", desc: "NEW: Kuwait National Guard shot down 6 Iranian drones across multiple regions.", color: C.missile, size: 10, tag: "missile", severity: "medium" },
-  { lat: 36.19, lng: 44.01, label: "Kirkuk — Militia Airstrike", desc: "NEW: Airstrike in Kirkuk killed at least 5 Iran-linked militia members. Responsible party unclear.", color: C.airstrike, size: 10, tag: "airstrike", severity: "medium" },
-  { lat: 36.40, lng: 44.40, label: "Erbil — UAE Consulate Hit", desc: "NEW: Iranian drone struck UAE consulate in Iraqi Kurdistan. Material damage, no injuries.", color: C.missile, size: 10, tag: "missile", severity: "medium" },
+  // Mar 10 16:43 BRT updates
+  { lat: 24.11, lng: 52.73, label: "Ruwais — ADNOC Refinery Shut Down", desc: "Iranian drone strike caused fire at Ruwais Industrial Complex. ADNOC shut world's largest refinery as precaution. No injuries.", color: C.energy, size: 14, tag: "energy", severity: "high" },
+  { lat: 26.30, lng: 50.00, label: "Saudi Eastern Province — Drones Intercepted", desc: "Saudi defense ministry intercepted and destroyed 2 Iranian drones over oil-rich eastern territory.", color: C.missile, size: 10, tag: "missile", severity: "medium" },
+  { lat: 29.50, lng: 47.75, label: "Kuwait — 6 Drones Downed", desc: "Kuwait National Guard shot down 6 Iranian drones across multiple regions.", color: C.missile, size: 10, tag: "missile", severity: "medium" },
+  { lat: 36.19, lng: 44.01, label: "Kirkuk — Militia Airstrike", desc: "Airstrike in Kirkuk killed at least 5 Iran-linked militia members. Responsible party unclear.", color: C.airstrike, size: 10, tag: "airstrike", severity: "medium" },
+  { lat: 36.40, lng: 44.40, label: "Erbil — UAE Consulate Hit", desc: "Iranian drone struck UAE consulate in Iraqi Kurdistan. Material damage, no injuries.", color: C.missile, size: 10, tag: "missile", severity: "medium" },
+
+  // NEW — Mar 10 17:44 BRT updates
+  { lat: 32.09, lng: 34.88, label: "Petah Tikva — Cluster Bomb Kills 2", desc: "NEW: Iranian cluster munitions hit construction sites in central Israel. Rustam Golomov (62) and Chinese worker killed. Multiple sites hit without sirens.", color: C.missile, size: 14, tag: "missile", severity: "high" },
+  { lat: 31.93, lng: 34.87, label: "Ramle — Daycare Hit by Hezbollah", desc: "NEW: Hezbollah missiles reached central Israel (deepest strikes ever). Daycare damaged in Ramle, 16 lightly injured. IDF destroyed 3 launchers within an hour.", color: C.missile, size: 12, tag: "missile", severity: "high" },
+  { lat: 34.99, lng: 33.62, label: "Cyprus — HMS Dragon Deploying", desc: "NEW: UK Type 45 destroyer HMS Dragon departed Portsmouth for eastern Mediterranean. Mission: protect RAF Akrotiri after Iranian drone struck runway Mar 1.", color: C.naval, size: 10, tag: "naval", severity: "medium" },
+  { lat: 32.82, lng: 34.98, label: "Haifa — Iran Claims Drone Strike", desc: "NEW: Iranian army claims drones hit military center in Haifa with 'major strategic importance for arms production' and satellite comms station.", color: C.missile, size: 12, tag: "missile", severity: "high" },
 ];
 
 /* ── Add markers to map ── */
@@ -166,13 +172,18 @@ L.polygon(
 
 /* ── Events Data ── */
 var events = [
-  { time: "Mar 10 16h", title: "ADNOC Shuts Ruwais Refinery After Drone Strike", desc: "Iranian drone caused fire at UAE's Ruwais Industrial Complex. ADNOC shut one of world's largest refineries as precaution. No injuries reported.", tag: "airstrike", severity: "high" },
+  { time: "Mar 10 17h", title: "Brent Crude Crashes 15% to $82/bbl", desc: "Massive single-day selloff on Trump de-escalation signals. Down from $99 yesterday and $120 peak. Market pricing in shorter war.", tag: "shipping", severity: "high" },
+  { time: "Mar 10 17h", title: "Iranian Cluster Bombs Kill 2 in Central Israel", desc: "Rustam Golomov (62) and Chinese worker killed at construction sites in Petah Tikva. No sirens sounded. Death toll in Israel now 16.", tag: "missile", severity: "high" },
+  { time: "Mar 10 17h", title: "Gold Surges to $5,228 in Safe-Haven Reversal", desc: "Up $125 (+2.4%) in powerful reversal. Investors fleeing equities as war uncertainty intensifies despite oil selloff.", tag: "shipping", severity: "high" },
+  { time: "Mar 10 17h", title: "HMS Dragon Deploys to Eastern Mediterranean", desc: "UK Type 45 destroyer departs Portsmouth for Cyprus. Mission: protect RAF Akrotiri after Iranian drone struck runway Mar 1.", tag: "naval", severity: "medium" },
+  { time: "Mar 10 17h", title: "Iran Claims Drone Strikes on Haifa Military Sites", desc: "Iranian army says drones hit military center and satellite comms station in Haifa. Claims targets key for 'arms production.'", tag: "missile", severity: "high" },
+  { time: "Mar 10 17h", title: "Netanyahu: 'Breaking Their Bones'", desc: "Vows to continue strikes on Iran. 'Our aim is to bring the Iranian people to cast off tyranny.' IDF estimates 1,900 regime fighters killed.", tag: "diplomacy", severity: "high" },
+  { time: "Mar 10 17h", title: "Israel Extends Wartime Emergency Through Saturday", desc: "Schools suspended, education halted. 1,929 people hospitalized since Feb 28. Restrictions continue amid constant missile threats.", tag: "diplomacy", severity: "medium" },
+  { time: "Mar 10 17h", title: "Iran Death Toll Rises to 1,332", desc: "Iranian UN envoy updates civilian death count. Intense overnight bombardment near Tehran's Risalat Square killed 40.", tag: "airstrike", severity: "high" },
+  { time: "Mar 10 16h", title: "ADNOC Shuts Ruwais Refinery After Drone Strike", desc: "Iranian drone caused fire at UAE's Ruwais Industrial Complex. ADNOC shut one of world's largest refineries as precaution.", tag: "airstrike", severity: "high" },
   { time: "Mar 10 16h", title: "Trump Threatens Iran '20x Harder' Over Hormuz", desc: "Truth Social post: 'death, fire and fury will reign' if Iran blocks oil flow. Calls it a 'gift' to China and oil-dependent nations.", tag: "diplomacy", severity: "high" },
-  { time: "Mar 10 16h", title: "Saudi, Kuwait Intercept Drones Over Territory", desc: "Saudi destroyed 2 drones over eastern oil region. Kuwait downed 6 drones. UAE consulate in Iraqi Kurdistan struck.", tag: "missile", severity: "medium" },
   { time: "Mar 10 16h", title: "US Eases Russian Oil Sanctions to Calm Markets", desc: "Treasury grants 30-day exemption for India to buy Russian oil in transit. Aims to offset Gulf supply disruption.", tag: "shipping", severity: "high" },
   { time: "Mar 10 16h", title: "South Korea Patriots Redeployed to Iran Theater", desc: "US pulling Patriot air defense systems from South Korea for Middle East. Seoul says it cannot stop the withdrawal.", tag: "diplomacy", severity: "medium" },
-  { time: "Mar 10 16h", title: "Kirkuk Airstrike Kills 5 Militia Members", desc: "Airstrike in Kirkuk, Iraq killed at least 5 Iran-linked militia fighters. Responsible party unclear.", tag: "airstrike", severity: "medium" },
-  { time: "Mar 10 16h", title: "Gold Corrects to $5,105 on Rising Yields", desc: "Down from $5,195 as Treasury yields rise and dollar firms. But safe-haven demand remains strong floor.", tag: "shipping", severity: "medium" },
   { time: "Mar 10 15h", title: "Hegseth: \"Most Intense Day\" of Strikes", desc: "5,000+ targets hit. 140 US troops injured (108 returned to duty). Iran missile launches at lowest rate since war began.", tag: "airstrike", severity: "high" },
   { time: "Mar 9", title: "Hezbollah Strikes Central Israel", desc: "\"High-quality missiles\" hit Rehavam Camp (135km) and IDF satellite station in Elah Valley (160km). Deepest Hezbollah strike into Israel.", tag: "missile", severity: "high" },
   { time: "Mar 9", title: "IDF Kills Nasr Unit Commander", desc: "Abu Hussein Ragheb killed in eastern South Lebanon. IDF 300th Brigade, 36th Div advancing.", tag: "ground", severity: "high" },

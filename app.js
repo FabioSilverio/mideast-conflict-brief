@@ -48,7 +48,7 @@ const C = {
 /* ── Map Data ── */
 const incidents = [
   // Iran - Airstrikes
-  { lat: 35.70, lng: 51.42, label: "Tehran — IRGC HQ Strikes", desc: "1,600+ IAF sorties; SNSC, Expediency Council destroyed. Mojtaba Khamenei elected new Supreme Leader Mar 8.", color: C.airstrike, size: 16, tag: "airstrike", severity: "high" },
+  { lat: 35.70, lng: 51.42, label: "Tehran — 5,000+ Targets Hit", desc: "UPDATED: Joint Chiefs confirms 5,000+ targets struck. 'Most intense day' underway. 1,270+ killed. Toxic smoke from oil strikes over city.", color: C.airstrike, size: 16, tag: "airstrike", severity: "high" },
   { lat: 32.65, lng: 51.68, label: "Isfahan — Natanz Nuclear", desc: "Natanz enrichment facility severely damaged. F-14s destroyed at 8th Tactical Airbase.", color: C.airstrike, size: 14, tag: "airstrike", severity: "high" },
   { lat: 34.90, lng: 50.60, label: "Fordow Nuclear Facility", desc: "Underground enrichment facility struck. 440kg of 60%-enriched uranium unaccounted for.", color: C.airstrike, size: 14, tag: "airstrike", severity: "high" },
   { lat: 28.95, lng: 50.83, label: "Bushehr Airport", desc: "Airport destroyed in IDF strikes Mar 3.", color: C.airstrike, size: 10, tag: "airstrike", severity: "medium" },
@@ -58,7 +58,7 @@ const incidents = [
   { lat: 36.68, lng: 48.49, label: "Zanjan — Hidden Launchers", desc: "Vehicle inspection center with hidden missile launchers destroyed Mar 9.", color: C.airstrike, size: 10, tag: "airstrike", severity: "medium" },
 
   // Lebanon
-  { lat: 33.88, lng: 35.50, label: "Beirut — Dahiyeh", desc: "500+ Hezbollah targets struck. 26 waves of airstrikes on Dahiyeh. 10 high-rise HQs destroyed.", color: C.airstrike, size: 14, tag: "airstrike", severity: "high" },
+  { lat: 33.88, lng: 35.50, label: "Beirut — Dahiyeh", desc: "UPDATED: 570 killed, 750K displaced in Lebanon. Al-Qard Al-Hassan financial network hit again today. New wave of strikes across country.", color: C.airstrike, size: 14, tag: "airstrike", severity: "high" },
   { lat: 33.12, lng: 35.50, label: "South Lebanon — IDF Ground Op", desc: "Multiple IDF brigades advancing. 300th Bde, 36th Div, 401st Bde in ground incursion.", color: C.ground, size: 14, tag: "ground", severity: "high" },
   { lat: 34.10, lng: 36.22, label: "Nabi Chit — Bekaa Valley", desc: "IDF strike killed 41, injured 40+. Alleged Ron Arad intelligence operation.", color: C.airstrike, size: 12, tag: "airstrike", severity: "high" },
 
@@ -99,6 +99,11 @@ const incidents = [
 
   // Saudi Pipeline
   { lat: 24.10, lng: 38.10, label: "Yanbu — Saudi Oil Reroute", desc: "Saudi Arabia rerouting crude via East-West Pipeline (7 mb/d capacity) to bypass Hormuz.", color: C.energy, size: 10, tag: "energy", severity: "medium" },
+
+  // NEW — Mar 10 15:40 BRT updates
+  { lat: 26.22, lng: 50.58, label: "Manama — Residential Building Hit", desc: "NEW: Iranian strike on residential building in Bahrain capital. 29-year-old woman killed, 8 injured. First confirmed civilian fatality.", color: C.missile, size: 12, tag: "missile", severity: "high" },
+  { lat: 31.77, lng: 35.23, label: "Jerusalem — Sirens Activated", desc: "NEW: Fresh Iranian missile salvo toward Israel. Sirens in Jerusalem. Air defenses engaging incoming threats.", color: C.missile, size: 12, tag: "missile", severity: "high" },
+  { lat: 32.08, lng: 34.78, label: "Tel Aviv — Explosions Reported", desc: "NEW: Explosions heard as Iron Dome intercepts Iranian missiles. 14 killed in Israel since war began.", color: C.missile, size: 12, tag: "missile", severity: "high" },
 ];
 
 /* ── Add markers to map ── */

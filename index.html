@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<!--
+   ______                            __
+  / ____/___  ____ ___  ____  __  __/ /____  _____
+ / /   / __ \/ __ `__ \/ __ \/ / / / __/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ / /_/  __/ /
+\____/\____/_/ /_/ /_/ .___/\__,_/\__/\___/_/
+                    /_/
+        Created with Perplexity Computer
+        https://www.perplexity.ai/computer
+-->
+<meta name="generator" content="Perplexity Computer">
+<meta name="author" content="Perplexity Computer">
+<meta property="og:see_also" content="https://www.perplexity.ai/computer">
+<link rel="author" href="https://www.perplexity.ai/computer">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Middle East Conflict Brief — March 10, 2026</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<link rel="stylesheet" href="./base.css" />
+<link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<div class="app">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-left">
+      <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-label="Conflict Brief">
+        <circle cx="16" cy="16" r="14" stroke="#ef4444" stroke-width="2" fill="none"/>
+        <circle cx="16" cy="16" r="6" fill="#ef4444" opacity="0.3"/>
+        <circle cx="16" cy="16" r="3" fill="#ef4444"/>
+        <line x1="16" y1="2" x2="16" y2="8" stroke="#ef4444" stroke-width="1.5"/>
+        <line x1="16" y1="24" x2="16" y2="30" stroke="#ef4444" stroke-width="1.5"/>
+        <line x1="2" y1="16" x2="8" y2="16" stroke="#ef4444" stroke-width="1.5"/>
+        <line x1="24" y1="16" x2="30" y2="16" stroke="#ef4444" stroke-width="1.5"/>
+      </svg>
+      <span class="header-title">MIDDLE EAST CONFLICT BRIEF</span>
+      <span class="live-badge"><span class="live-dot"></span> DAY 10</span>
+    </div>
+    <div class="header-meta">
+      <span>Operation Epic Fury</span>
+      <time datetime="2026-03-10">10 MAR 2026 · 14:58 BRT</time>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="main">
+
+    <!-- Map -->
+    <div class="map-container">
+      <div id="map"></div>
+      <div class="map-legend">
+        <div class="legend-item"><span class="legend-dot" style="background:#ef4444"></span> Airstrike / Missile</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#f59e0b"></span> Ground Operation</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#3b82f6"></span> Naval / Shipping</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#06b6d4"></span> Airspace Closure</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#a855f7"></span> Oil / Energy</div>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-tabs">
+        <button class="tab-btn active" data-tab="brief">Brief</button>
+        <button class="tab-btn" data-tab="events">Events</button>
+        <button class="tab-btn" data-tab="scenarios">Scenarios</button>
+      </div>
+
+      <!-- Brief Tab -->
+      <div class="tab-content">
+        <div class="tab-panel active" id="tab-brief">
+
+          <!-- Audio Player -->
+          <div class="audio-player">
+            <div class="audio-label">2-Minute Audio Brief</div>
+            <div class="audio-controls">
+              <button class="play-btn" id="playBtn" aria-label="Play audio brief">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+              </button>
+              <div class="audio-progress">
+                <div class="progress-bar" id="progressBar">
+                  <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="audio-time">
+                  <span id="currentTime">0:00</span>
+                  <span id="duration">0:00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- KPIs -->
+          <div class="kpi-grid">
+            <div class="kpi-card">
+              <div class="kpi-label">Brent Crude</div>
+              <div class="kpi-value up">$89–92</div>
+              <div class="kpi-delta">Peak $126 · +23% from pre-war</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">Hormuz Traffic</div>
+              <div class="kpi-value up">~0/day</div>
+              <div class="kpi-delta">Down from 37 tankers/day</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">Gold</div>
+              <div class="kpi-value warn">$5,150</div>
+              <div class="kpi-delta">ATH $5,595 · Safe haven flows</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">Jet Fuel</div>
+              <div class="kpi-value up">+80%</div>
+              <div class="kpi-delta">$830 → $1,500/tonne</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">War Risk Premium</div>
+              <div class="kpi-value up">3%</div>
+              <div class="kpi-delta">Hull value · was 0.2%</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">Iran Capacity</div>
+              <div class="kpi-value down">~10%</div>
+              <div class="kpi-delta">Missile capability remaining</div>
+            </div>
+          </div>
+
+          <!-- Escalation Meter -->
+          <div class="escalation-meter">
+            <div class="audio-label">Escalation Level</div>
+            <div class="meter-track">
+              <div class="meter-thumb" style="left:78%"></div>
+            </div>
+            <div class="meter-labels">
+              <span>Posturing</span>
+              <span>Limited</span>
+              <span>Regional</span>
+              <span>Total War</span>
+            </div>
+          </div>
+
+          <!-- Countries Most Likely Pulled In -->
+          <div class="section-title">Next Countries at Risk</div>
+
+          <div class="country-risk">
+            <span class="risk-flag">🇾🇪</span>
+            <div class="risk-info">
+              <div class="risk-name">Yemen (Houthis)</div>
+              <div class="risk-reason">Signaled return to Red Sea attacks; strategic restraint for now</div>
+            </div>
+            <span class="risk-level risk-critical">Critical</span>
+          </div>
+
+          <div class="country-risk">
+            <span class="risk-flag">🇹🇷</span>
+            <div class="risk-info">
+              <div class="risk-name">Turkey</div>
+              <div class="risk-reason">2 Iranian missiles intercepted by NATO; Article 5 threshold</div>
+            </div>
+            <span class="risk-level risk-high">High</span>
+          </div>
+
+          <div class="country-risk">
+            <span class="risk-flag">🇮🇶</span>
+            <div class="risk-info">
+              <div class="risk-name">Iraq</div>
+              <div class="risk-reason">67+ militia attacks on US forces; oil infrastructure hit; de facto combat zone</div>
+            </div>
+            <span class="risk-level risk-critical">Critical</span>
+          </div>
+
+          <div class="country-risk">
+            <span class="risk-flag">🇸🇾</span>
+            <div class="risk-info">
+              <div class="risk-name">Syria</div>
+              <div class="risk-reason">IDF ground incursion into Daraa; Turkey expanding military presence</div>
+            </div>
+            <span class="risk-level risk-high">High</span>
+          </div>
+
+          <div class="country-risk">
+            <span class="risk-flag">🇯🇴</span>
+            <div class="risk-info">
+              <div class="risk-name">Jordan</div>
+              <div class="risk-reason">Iraqi militias claiming drone attacks on US bases in Jordan</div>
+            </div>
+            <span class="risk-level risk-moderate">Moderate</span>
+          </div>
+
+        </div>
+
+        <!-- Events Tab -->
+        <div class="tab-panel" id="tab-events">
+          <div class="section-title">Key Developments (Last 48h)</div>
+          <div class="event-feed" id="eventFeed"></div>
+        </div>
+
+        <!-- Scenarios Tab -->
+        <div class="tab-panel" id="tab-scenarios">
+          <div class="section-title">Escalation Scenarios & Market Impact</div>
+          <table class="scenario-table">
+            <thead>
+              <tr>
+                <th>Scenario</th>
+                <th>Prob.</th>
+                <th>Brent</th>
+                <th>Impact</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="color: var(--color-green)">A: De-escalation</td>
+                <td><span class="prob-bar" style="width:30px; background:var(--color-green)"></span>25–30%</td>
+                <td>&lt;$80</td>
+                <td>Markets recover; rates normalize; risk premium unwinds</td>
+              </tr>
+              <tr>
+                <td style="color: var(--color-yellow)">B: Protracted</td>
+                <td><span class="prob-bar" style="width:48px; background:var(--color-yellow)"></span>40–50%</td>
+                <td>$80–100</td>
+                <td>Energy inflation persists; shipping rerouted; no bear market</td>
+              </tr>
+              <tr>
+                <td style="color: var(--color-orange)">C: Escalation</td>
+                <td><span class="prob-bar" style="width:20px; background:var(--color-orange)"></span>15–20%</td>
+                <td>$100–150</td>
+                <td>Equity correction; EM currency crises; Gulf states enter combat</td>
+              </tr>
+              <tr>
+                <td style="color: var(--color-red)">D: Total War</td>
+                <td><span class="prob-bar" style="width:10px; background:var(--color-red)"></span>5–10%</td>
+                <td>$150–200+</td>
+                <td>Global recession; supply chain collapse; $200/bbl (Deutsche Bank)</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div style="margin-top:var(--space-6)">
+            <div class="section-title">Market Dashboard</div>
+            <table class="scenario-table">
+              <thead>
+                <tr><th>Asset</th><th>Level</th><th>Move</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Brent Crude</td><td style="color:var(--color-red)">$89–92/bbl</td><td>+23% from $72 pre-war</td></tr>
+                <tr><td>WTI Crude</td><td style="color:var(--color-red)">$87–89/bbl</td><td>+31% from $67 pre-war</td></tr>
+                <tr><td>Gold</td><td style="color:var(--color-orange)">$5,150/oz</td><td>Volatile · ATH $5,595</td></tr>
+                <tr><td>DXY (USD)</td><td style="color:var(--color-green)">~98.5</td><td>+3pts safe-haven bid</td></tr>
+                <tr><td>Jet Fuel</td><td style="color:var(--color-red)">$1,500/t</td><td>+80% from $830</td></tr>
+                <tr><td>EU Gas (TTF)</td><td style="color:var(--color-red)">~€48/MWh</td><td>Peaked €60; from €30</td></tr>
+                <tr><td>RTX (Defense)</td><td style="color:var(--color-green)">+110%</td><td>Since Feb 28</td></tr>
+                <tr><td>Northrop</td><td style="color:var(--color-green)">+60%</td><td>Since Feb 28</td></tr>
+                <tr><td>TASE (Israel)</td><td style="color:var(--color-green)">ATH</td><td>+4.6% on Mar 2</td></tr>
+                <tr><td>Tadawul (Saudi)</td><td style="color:var(--color-red)">-2.2%</td><td>Largest daily loss since Apr</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div style="margin-top:var(--space-6)">
+            <div class="section-title">Key Watch Items</div>
+            <div class="event-feed">
+              <div class="event-item" data-severity="high">
+                <div class="event-body">
+                  <div class="event-title">Houthi Red Sea Resumption</div>
+                  <div class="event-desc">Signaled return to attacks but showing strategic restraint. If activated, creates two-front maritime crisis (Hormuz + Bab el-Mandeb).</div>
+                </div>
+              </div>
+              <div class="event-item" data-severity="high">
+                <div class="event-body">
+                  <div class="event-title">Turkish NATO Article 5</div>
+                  <div class="event-desc">Two Iranian missiles intercepted over Turkey. Formal Article 5 invocation would radically expand the conflict.</div>
+                </div>
+              </div>
+              <div class="event-item" data-severity="medium">
+                <div class="event-body">
+                  <div class="event-title">Iran Nuclear Material</div>
+                  <div class="event-desc">440kg of 60%-enriched uranium unaccounted for after strikes on Natanz/Fordow. IAEA cannot access bombed sites.</div>
+                </div>
+              </div>
+              <div class="event-item" data-severity="medium">
+                <div class="event-body">
+                  <div class="event-title">SPR Releases</div>
+                  <div class="event-desc">G7 finance ministers pledged strategic reserve releases if needed. Trump suggesting quick end to hostilities.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </aside>
+
+  </main>
+
+</div>
+
+<footer class="site-footer">
+  <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer">Created with Perplexity Computer</a>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="./app.js"></script>
+</body>
+</html>

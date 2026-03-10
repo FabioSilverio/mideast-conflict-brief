@@ -48,7 +48,7 @@ const C = {
 /* ── Map Data ── */
 const incidents = [
   // Iran - Airstrikes
-  { lat: 35.70, lng: 51.42, label: "Tehran — 5,000+ Targets Hit", desc: "UPDATED: 5,000+ targets struck. 1,332+ killed (per Iran UN envoy), ~1,900 regime fighters killed (IDF est). Intense bombardment near Risalat Square killed 40.", color: C.airstrike, size: 16, tag: "airstrike", severity: "high" },
+  { lat: 35.70, lng: 51.42, label: "Tehran — 5,000+ Targets Hit", desc: "UPDATED: 5,000+ targets struck. 1,332+ killed. Power outages across districts. 100,000+ fled city in first 2 days (UNHCR). 170+ bombs in latest wave on Tehran, Isfahan, Shiraz.", color: C.airstrike, size: 16, tag: "airstrike", severity: "high" },
   { lat: 32.65, lng: 51.68, label: "Isfahan — Natanz Nuclear", desc: "Natanz enrichment facility severely damaged. F-14s destroyed at 8th Tactical Airbase.", color: C.airstrike, size: 14, tag: "airstrike", severity: "high" },
   { lat: 34.90, lng: 50.60, label: "Fordow Nuclear Facility", desc: "Underground enrichment facility struck. 440kg of 60%-enriched uranium unaccounted for.", color: C.airstrike, size: 14, tag: "airstrike", severity: "high" },
   { lat: 28.95, lng: 50.83, label: "Bushehr Airport", desc: "Airport destroyed in IDF strikes Mar 3.", color: C.airstrike, size: 10, tag: "airstrike", severity: "medium" },
@@ -58,7 +58,7 @@ const incidents = [
   { lat: 36.68, lng: 48.49, label: "Zanjan — Hidden Launchers", desc: "Vehicle inspection center with hidden missile launchers destroyed Mar 9.", color: C.airstrike, size: 10, tag: "airstrike", severity: "medium" },
 
   // Lebanon
-  { lat: 33.88, lng: 35.50, label: "Beirut — Dahiyeh", desc: "UPDATED: 570 killed, 750K displaced in Lebanon. Al-Qard Al-Hassan financial network hit again today. New wave of strikes across country.", color: C.airstrike, size: 14, tag: "airstrike", severity: "high" },
+  { lat: 33.88, lng: 35.50, label: "Beirut — Dahiyeh", desc: "UPDATED: 570+ killed, 700K displaced (200K children) per UN. Al-Qard Al-Hassan financial network targeted. France calls emergency UNSC meeting for tomorrow.", color: C.airstrike, size: 14, tag: "airstrike", severity: "high" },
   { lat: 33.12, lng: 35.50, label: "South Lebanon — IDF Ground Op", desc: "Multiple IDF brigades advancing. 300th Bde, 36th Div, 401st Bde in ground incursion.", color: C.ground, size: 14, tag: "ground", severity: "high" },
   { lat: 34.10, lng: 36.22, label: "Nabi Chit — Bekaa Valley", desc: "IDF strike killed 41, injured 40+. Alleged Ron Arad intelligence operation.", color: C.airstrike, size: 12, tag: "airstrike", severity: "high" },
 
@@ -79,8 +79,8 @@ const incidents = [
   { lat: 29.38, lng: 47.98, label: "Kuwait — Ali al Salem AB", desc: "394 drones + 212 missiles. Air base fire. US Embassy struck and closed. Force majeure.", color: C.missile, size: 12, tag: "missile", severity: "high" },
 
   // Strait of Hormuz
-  { lat: 26.60, lng: 56.30, label: "Strait of Hormuz — CLOSED", desc: "Tanker traffic at ZERO. 17 vessels attacked, 2 sunk, 3 seafarers killed. Only Chinese/Turkish ships permitted.", color: C.naval, size: 16, tag: "naval", severity: "high" },
-  { lat: 26.56, lng: 54.88, label: "Bandar Lengeh — Corvette Sunk", desc: "Iranian Shahid Soleimani-class corvette sunk by combined force. 43+ Iranian naval vessels destroyed.", color: C.naval, size: 10, tag: "naval", severity: "medium" },
+  { lat: 26.60, lng: 56.30, label: "Strait of Hormuz — CLOSED", desc: "UPDATED: Tanker traffic at ZERO. US now hunting mine-laying vessels. Pentagon considering escort options for reopening. 50+ Iranian naval ships destroyed.", color: C.naval, size: 16, tag: "naval", severity: "high" },
+  { lat: 26.56, lng: 54.88, label: "Bandar Lengeh — 50+ Ships Sunk", desc: "UPDATED: 50+ Iranian naval ships destroyed including drone carrier. US striking mine-laying vessels and mine storage facilities.", color: C.naval, size: 10, tag: "naval", severity: "medium" },
 
   // Iraq
   { lat: 33.30, lng: 44.40, label: "Baghdad — Militia Attacks", desc: "67+ drone/missile attacks on US forces. US Embassy targeted. PMF architecture fractured.", color: C.proxy, size: 14, tag: "missile", severity: "high" },
@@ -172,14 +172,17 @@ L.polygon(
 
 /* ── Events Data ── */
 var events = [
-  { time: "Mar 10 17h", title: "Brent Crude Crashes 15% to $82/bbl", desc: "Massive single-day selloff on Trump de-escalation signals. Down from $99 yesterday and $120 peak. Market pricing in shorter war.", tag: "shipping", severity: "high" },
-  { time: "Mar 10 17h", title: "Iranian Cluster Bombs Kill 2 in Central Israel", desc: "Rustam Golomov (62) and Chinese worker killed at construction sites in Petah Tikva. No sirens sounded. Death toll in Israel now 16.", tag: "missile", severity: "high" },
-  { time: "Mar 10 17h", title: "Gold Surges to $5,228 in Safe-Haven Reversal", desc: "Up $125 (+2.4%) in powerful reversal. Investors fleeing equities as war uncertainty intensifies despite oil selloff.", tag: "shipping", severity: "high" },
+  { time: "Mar 10 18h", title: "White House: War Ends When Trump Decides", desc: "Leavitt says operations cease when 'commander in chief assesses military goals met and fully realized -- complete unconditional surrender.'", tag: "diplomacy", severity: "high" },
+  { time: "Mar 10 18h", title: "US Hunting Iranian Mine-Laying Vessels in Hormuz", desc: "Gen. Caine confirms 50+ Iranian naval ships destroyed. US striking mine vessels and storage. Pentagon exploring escort options for strait reopening.", tag: "naval", severity: "high" },
+  { time: "Mar 10 18h", title: "Iran Drone Attacks Down 83%, Missiles Down 90%", desc: "Pentagon reveals sharp decline in Iranian launch capability. Caine calls it 'strong evidence of degradation' but Iran disputes, claims heavier warheads.", tag: "airstrike", severity: "high" },
+  { time: "Mar 10 18h", title: "100,000+ Fled Tehran in First 2 Days", desc: "UNHCR says actual displacement 'likely much greater.' Power outages across Tehran. Residents report 30-min sustained bombardment shaking buildings.", tag: "airstrike", severity: "high" },
+  { time: "Mar 10 18h", title: "Brent Settles at $91.64 After Wild $82 Intraday Low", desc: "Recovered from 15% crash. Settled -7% from yesterday's $99. Extreme intraday volatility on conflicting war signals.", tag: "shipping", severity: "high" },
+  { time: "Mar 10 18h", title: "France Calls Emergency UN Security Council Meeting", desc: "Meeting on Lebanon set for tomorrow. France condemns Hezbollah but calls for end to hostilities. 700K displaced including 200K children.", tag: "diplomacy", severity: "high" },
+  { time: "Mar 10 18h", title: "Iranian Leaders Issue Direct Threats to Trump", desc: "Larijani: 'Be careful not to get eliminated yourself.' Qalibaf: 'Definitely not looking for ceasefire.' Araghchi mocks 'Operation Epic Mistake.'", tag: "diplomacy", severity: "high" },
+  { time: "Mar 10 17h", title: "Iranian Cluster Bombs Kill 2 in Central Israel", desc: "Rustam Golomov (62) and Chinese worker killed at construction sites. No sirens sounded. Death toll in Israel now 16.", tag: "missile", severity: "high" },
+  { time: "Mar 10 17h", title: "Gold Surges to $5,228 in Safe-Haven Reversal", desc: "Up $125 (+2.4%) in powerful reversal. Investors fleeing equities as war uncertainty intensifies.", tag: "shipping", severity: "high" },
   { time: "Mar 10 17h", title: "HMS Dragon Deploys to Eastern Mediterranean", desc: "UK Type 45 destroyer departs Portsmouth for Cyprus. Mission: protect RAF Akrotiri after Iranian drone struck runway Mar 1.", tag: "naval", severity: "medium" },
-  { time: "Mar 10 17h", title: "Iran Claims Drone Strikes on Haifa Military Sites", desc: "Iranian army says drones hit military center and satellite comms station in Haifa. Claims targets key for 'arms production.'", tag: "missile", severity: "high" },
   { time: "Mar 10 17h", title: "Netanyahu: 'Breaking Their Bones'", desc: "Vows to continue strikes on Iran. 'Our aim is to bring the Iranian people to cast off tyranny.' IDF estimates 1,900 regime fighters killed.", tag: "diplomacy", severity: "high" },
-  { time: "Mar 10 17h", title: "Israel Extends Wartime Emergency Through Saturday", desc: "Schools suspended, education halted. 1,929 people hospitalized since Feb 28. Restrictions continue amid constant missile threats.", tag: "diplomacy", severity: "medium" },
-  { time: "Mar 10 17h", title: "Iran Death Toll Rises to 1,332", desc: "Iranian UN envoy updates civilian death count. Intense overnight bombardment near Tehran's Risalat Square killed 40.", tag: "airstrike", severity: "high" },
   { time: "Mar 10 16h", title: "ADNOC Shuts Ruwais Refinery After Drone Strike", desc: "Iranian drone caused fire at UAE's Ruwais Industrial Complex. ADNOC shut one of world's largest refineries as precaution.", tag: "airstrike", severity: "high" },
   { time: "Mar 10 16h", title: "Trump Threatens Iran '20x Harder' Over Hormuz", desc: "Truth Social post: 'death, fire and fury will reign' if Iran blocks oil flow. Calls it a 'gift' to China and oil-dependent nations.", tag: "diplomacy", severity: "high" },
   { time: "Mar 10 16h", title: "US Eases Russian Oil Sanctions to Calm Markets", desc: "Treasury grants 30-day exemption for India to buy Russian oil in transit. Aims to offset Gulf supply disruption.", tag: "shipping", severity: "high" },
@@ -195,10 +198,7 @@ var events = [
   { time: "Mar 6", title: "Qatar LNG Force Majeure", desc: "Ras Laffan terminal shut after strikes. 20% of global LNG supply halted. TTF gas spiked to €60/MWh.", tag: "shipping", severity: "high" },
   { time: "Mar 6", title: "Bahrain Water Plant Hit", desc: "Iranian drone strikes Bahrain desalination plant. 3 injured by interception debris near university.", tag: "missile", severity: "high" },
   { time: "Mar 5", title: "Insurance Cancellations", desc: "Major P&I clubs canceled war risk coverage for Gulf vessels. Premiums surged to 3% of hull value.", tag: "shipping", severity: "high" },
-  { time: "Mar 4", title: "NATO Intercepts Iranian Missile Over Turkey", desc: "First of two interceptions. Article 5 threshold under NATO discussion.", tag: "missile", severity: "high" },
-  { time: "Mar 3", title: "IDF Ground Invasion of Lebanon", desc: "Multiple brigades enter South Lebanon. Seize Kfar Kila, Houla, Khiam. 500+ Hezbollah targets struck.", tag: "ground", severity: "high" },
-  { time: "Mar 2", title: "Dubai Airport Closed", desc: "World's busiest international airport for travel closed for 5 consecutive days. Largest disruption since COVID.", tag: "shipping", severity: "high" },
-  { time: "Mar 2", title: "Hezbollah Breaks Ceasefire", desc: "Fires rockets at Israel including Haifa missile defense site. IDF bombs Beirut at 3am.", tag: "missile", severity: "high" },
+  { time: "Mar 3", title: "IDF Ground Invasion of Lebanon", desc: "Multiple brigades enter South Lebanon. 500+ Hezbollah targets struck.", tag: "ground", severity: "high" },
   { time: "Feb 28", title: "Operation Epic Fury Begins", desc: "US-Israel launch joint air campaign. Supreme Leader Khamenei assassinated. 500+ targets on day 1. Iran responds with Operation True Promise IV.", tag: "airstrike", severity: "high" },
 ];
 
